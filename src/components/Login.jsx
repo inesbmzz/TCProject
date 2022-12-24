@@ -1,12 +1,14 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import {login} from "../features/user"
 
 const Login = () => {
-    const dispatch = useDispatch()
+    const user = useSelector((state)=>state.user.value)
+    console.log(user)
     return (
         <div>
-            <button onClick={()=>{dispatch(login({name:"ines",email:"ki_boumazouza@esi.dz"}))}}>Log In</button>
+            <p>Name : {user.name}</p>
+            <p>Email : {user.email}</p>
         </div>
     );
 };
