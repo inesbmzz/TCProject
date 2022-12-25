@@ -41,6 +41,9 @@ const Profile=()=> {
                 onChange={handleChange2}/>
 
             <button onClick={()=>{dispatch(login({name:name,email:email}))}}>Log In</button>
+            <p>Name : {user.name}</p>
+            <p>Email : {user.email}</p>
+            <Login></Login>
             
         </div>
     );
